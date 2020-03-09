@@ -36,7 +36,7 @@ int total=jsonObja.bitbucket.Commit_count
  // println(jsonObja)
   //println(total)
  
-	    LIST.add(["toolName":name,"metric":"commits","value":total])
+	    LIST.add(["toolName":name,"metricName":"commits","value":total])
  /* if(total>5)
   {
     score=score+10
@@ -57,19 +57,19 @@ def total=jsonObjb.Bamboo.totalBuilds
  // def obj = JSON.parse(bamboo1)
  //println(cnt)
 	  
-	    LIST.add(["toolName":name,"metric":"total_builds","value":total])
+	    LIST.add(["toolName":name,"metricName":"total_builds","value":total])
 	    
  
-	    LIST.add(["toolName":name,"metric":"success_builds","value":scnt])
+	    LIST.add(["toolName":name,"metricName":"success_builds","value":scnt])
 	    
 
-	    LIST.add(["toolName":name,"metric":"failure_builds","value":fcnt])
+	    LIST.add(["toolName":name,"metricName":"failure_builds","value":fcnt])
 	    
     }
 	  
     if(jsonStringa[i].contains("Sonar"))
     {
-	    name="Sonar"
+	    name="sonar"
 	    def jsonObjc = readJSON text: jsonStringa[i]
 	    print jsonObjc
 	    for(i=0;i<jsonObjc.Sonar.Metrics.component.measures.size();i++){
@@ -77,7 +77,7 @@ def total=jsonObjb.Bamboo.totalBuilds
     def sonar_metric=jsonObjc.Sonar.Metrics.component.measures[i].metric
 		    def d=jsonObjc.Sonar.Metrics.component.measures[i].value
     double data = Double.parseDouble(d); 
-       LIST.add(["toolName":name,"metric":sonar_metric,"value":data])
+       LIST.add(["toolName":name,"metricName":sonar_metric,"value":data])
 	    }
     }
 	   // metric="successfulbuilds"
