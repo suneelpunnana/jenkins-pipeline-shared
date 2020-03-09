@@ -62,6 +62,7 @@ int ecount = jsonObj.config.emails.email.size()
     LIST.add(["toolname":name,"metric":"No of least failure builds","score":score])
 	  reward=reward+score 
     score=0
+	  print LIST
   }
    }
 	    if(jsonStringa[i].contains("bitbucket"))
