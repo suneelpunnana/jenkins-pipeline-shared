@@ -14,6 +14,7 @@ int ecount = jsonObj.config.emails.email.size()
   List<String> JSON1 = new ArrayList<String>();
 	List<String> jsonStringa= new ArrayList<String>();
 	jsonStringa.add(bamboo)
+	print jsonStringa
   jsonStringa.add(bitbucket)
    
   // jsonStringa.add(gitlab)
