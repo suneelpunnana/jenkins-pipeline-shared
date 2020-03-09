@@ -76,6 +76,7 @@ def total=jsonObjb.Bamboo.totalBuilds
     double data = Double.parseDouble(d); 
        LIST.add(["toolName":name,"metric":metric,"value":data])
 	    }
+    }
 	   // metric="successfulbuilds"
     //  def jsonStringb = bamboo
 
