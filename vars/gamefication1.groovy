@@ -39,9 +39,9 @@ int ecount = jsonObj.config.emails.email.size()
 	   def jsonObja = readJSON text: jsonStringa[i]
 
   //println(jsonObja)
-  def scnt =jsonObja.Bamboo.individualsuccess[j].Success_cnt
-  def fcnt =jsonObja.Bamboo.individualfailure[j].Failure_cnt
- def email1=jsonObja.Bamboo.individualsuccess[j].email
+  def scnt =jsonObja.Bamboo.individualsuccess[i].Success_cnt
+  def fcnt =jsonObja.Bamboo.individualfailure[i].Failure_cnt
+ def email1=jsonObja.Bamboo.individualsuccess[i].email
       
  // def res=bamboo1.bamboo.teamsuccessbuild_cnt
  // def obj = JSON.parse(bamboo1)
