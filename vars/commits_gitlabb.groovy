@@ -5,7 +5,7 @@ import groovy.json.JsonSlurper
 def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
-      String a=jsonObj.scm1.projects.project.project_name
+      String a=jsonObj.scm1.projects.project.project_id
 String Name=a.replaceAll("\\[", "").replaceAll("\\]","");
      withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
       sh "curl -X GET    -u $username:$password https://gitlab.com/api/v4/users/5418155/projects -o outputgitlab.json"
