@@ -44,7 +44,7 @@ int ecount = jsonObj.config.emails.email.size()
       
  // def res=bamboo1.bamboo.teamsuccessbuild_cnt
  // def obj = JSON.parse(bamboo1)
- println(scnt)
+ println("bamboo"+scnt)
  //int score=0
 	  
  if(email==email1 && scnt>1)
@@ -85,7 +85,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
     }
 	   JSON1[j]=LIST.clone()
 	   print ("Json dataaaaaa"+JSON1[j])
-   JSON.add(["email":email1,"reward": reward,"metrics": JSON1[j]])
+   JSON.add(["email":email,"reward": reward,"metrics": JSON1[j]])
     LIST.clear()
 	reward=0    
 	     
