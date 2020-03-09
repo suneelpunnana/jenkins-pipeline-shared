@@ -84,8 +84,8 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
   }
     }
 	   JSON1[j]=LIST.clone()
-	   print JSON1[j]
-   JSON.add(["email":email,"reward": reward,"metrics":8])
+	   print ("Json dataaaaaa"+JSON1[j])
+   JSON.add(["email":email,"reward": reward,"metrics": JSON1[j]])
     LIST.clear()
 	reward=0    
 	     
