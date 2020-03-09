@@ -21,6 +21,7 @@ int ecount = jsonObj.config.emails.email.size()
 	 for(j=0;j<ecount;j++)
    {
 	 def email=jsonObj.config.emails.email[j] 
+	   print(email)
 	   int score=0
     int reward=0
     String name="  "
