@@ -70,6 +70,7 @@ def total=jsonObjb.Bamboo.totalBuilds
     if(jsonStringa[i].contains("Sonar"))
     {
 	    name="Sonar"
+	    print jsonObj.Sonar.Metrics.component.measures
 	    for(i=0;i<jsonObj.Sonar.Metrics.component.measures.size();i++){
 		    print jsonObj.Sonar.Metrics.component.measures
     def sonar_metric=jsonObj.Sonar.Metrics.component.measures[i].metric
