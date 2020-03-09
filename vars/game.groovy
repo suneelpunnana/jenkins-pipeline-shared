@@ -1,6 +1,7 @@
 import groovy.json.*
 import groovy.json.JsonOutput
-def call(jsondata,bamboo,bitbucket,gitlab)
+//def call(jsondata,bamboo,bitbucket,gitlab)
+def call(jsondata,bamboo,bitbucket)
 {
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
@@ -14,7 +15,7 @@ int ecount = jsonObj.config.emails.email.size()
 	List<String> jsonStringa= new ArrayList<String>();
 	jsonStringa.add(bamboo)
   jsonStringa.add(bitbucket)
-   jsonStringa.add(gitlab)
+  // jsonStringa.add(gitlab)
 	 for(j=0;j<ecount;j++)
    {
 	 def email=jsonObj.config.emails.email[j] 
@@ -80,7 +81,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	  score=0
   }
   }
-	  if(jsonStringa[i].contains("gitlab"))
+	 /* if(jsonStringa[i].contains("gitlab"))
       {
         name="gitlab"
 	      //metric="commits"
@@ -95,7 +96,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	  reward=reward+score
 	  score=0
   }
-      }
+      }*/
     }
 	   JSON1[j]=LIST.clone()
 	   
