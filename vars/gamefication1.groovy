@@ -11,10 +11,10 @@ int ecount = jsonObj.config.emails.email.size()
  
  List<String> JSON = new ArrayList<String>();
   List<String> LIST = new ArrayList<String>();
-  List<String> JSON1 = new ArrayList<String>();
+  //List<String> JSON1 = new ArrayList<String>();
 	List<String> jsonStringa= new ArrayList<String>();
 	jsonStringa.add(bamboo)
-	print jsonStringa
+	//print jsonStringa
   jsonStringa.add(bitbucket)
    
   // jsonStringa.add(gitlab)
@@ -86,9 +86,9 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
   }
   }
     }
-	   JSON1[j]=LIST.clone()
-	   print ("Json dataaaaaa"+JSON1[j])
-   JSON.add(["email":email,"reward": reward,"metrics": JSON1[j]])
+	   //JSON1[j]=LIST.clone()
+	   //print ("Json dataaaaaa"+JSON1[j])
+   JSON.add(["email":email,"reward": reward,"metrics": LIST])
     LIST.clear()
 	reward=0    
 	     
