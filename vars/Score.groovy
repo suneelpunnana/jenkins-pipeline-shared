@@ -71,6 +71,7 @@ def total=jsonObjb.Bamboo.totalBuilds
     {
 	    name="Sonar"
 	    for(i=0;i<jsonObj.Sonar.Metrics.component.measures.size();i++){
+		    print jsonObj.Sonar.Metrics.component.measures
     def sonar_metric=jsonObj.Sonar.Metrics.component.measures[i].metric
 		    def d=jsonObj.Sonar.Metrics.component.measures[i].value
     double data = Double.parseDouble(d); 
